@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #define SIZE 20
+
 int main()
 {
     int n;
