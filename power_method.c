@@ -76,11 +76,12 @@ int main()
         scanf("%f", &g[i][0]);
     }
     float prev = 0;
+    float val;
     for (itr = 0; itr < maxitr; itr++)
     {
         multiplyMatrices(m, g, o);
 
-        float val = returnMax(o);
+        val = returnMax(o);
         divideArr(o, val);
         printf("%f=>\t\t", val);
         for (int i = 0; i < N; i++)
@@ -93,7 +94,8 @@ int main()
         {
             g[i][0] = o[i][0];
         }
-        if ((val - prev) < aerr)
+
+        if (fabs(prev - val) <= aerr)
         {
             printf("The max eigen value is %f", val);
             return 1;
@@ -101,5 +103,6 @@ int main()
 
         prev = val;
     }
+
     return 0;
 }
