@@ -83,11 +83,11 @@ int main()
 
         val = returnMax(o);
         divideArr(o, val);
-        printf("%f=>\t\t", val);
+        printf("It.no %d -> Value: %f \n", itr + 1, val);
         for (int i = 0; i < N; i++)
         {
 
-            printf(" %f ", o[i][0]);
+            printf(" | %f |\n  ", o[i][0]);
         }
         printf("\n");
         for (int i = 0; i < N; i++)
